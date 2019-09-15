@@ -1,7 +1,7 @@
 <template>
   <article class="article">
-      <h2 class="article__header">{{ article.id }} {{ article.header }}</h2>
-      <div class="article__date">{{ article.date | moment('DD.MM.YYYY, h:mm') }}</div>
+      <h2 class="article__header">{{ article.header }}</h2>
+      <div class="article__date">{{ article.date | moment('DD.MM.YYYY, H:mm') }}</div>
       <div>
         <div>{{ article.text }}</div>
         <div class="article__edit-box" v-if="editAllowed">

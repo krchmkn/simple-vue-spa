@@ -60,7 +60,7 @@ export default {
                 id: this.articleId,
                 header: this.header, 
                 text: this.text
-            }).then(this.close).catch((err) => {
+            }).then(this.close).catch(() => {
                 alert('Ошибка!')
             });
         }

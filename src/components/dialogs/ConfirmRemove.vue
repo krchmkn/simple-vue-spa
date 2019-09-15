@@ -21,7 +21,7 @@ export default {
         remove() {
             this.$store.dispatch('removeArticle', { 
                 id: this.$store.getters.modals.remove.current.id 
-            }).then(this.close).catch((err) => alert('Ошибка!'));
+            }).then(this.close).catch(() => alert('Ошибка!'));
         }
     }
 }

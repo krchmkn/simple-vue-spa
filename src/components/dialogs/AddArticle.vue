@@ -32,7 +32,7 @@ export default {
             this.$store.dispatch('addArticle', { 
                 header: this.header, 
                 text: this.text
-            }).then(this.close).catch((err) => {
+            }).then(this.close).catch(() => {
                 alert('Ошибка!')
             });
         }

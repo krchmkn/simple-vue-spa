@@ -43,8 +43,6 @@ export default {
 
     & a {
       color: #42b983;
-      text-decoration: none;
-      border-bottom: 1px solid #42b983;
     }
   }
 </style>

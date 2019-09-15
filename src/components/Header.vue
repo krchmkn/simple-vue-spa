@@ -55,7 +55,7 @@ export default {
         &__menu {
             display: flex;
             align-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-end;
         }
 
@@ -65,8 +65,9 @@ export default {
             line-height: 20px;
 
             &--active {
-                border: 0;
+                text-decoration: none;
             }
         }
     }
 </style>
+

@@ -40,10 +40,10 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
   }
 
-  if (to.meta && to.meta.requiresAuth) {
-    !store.getters.user.isAuthorized ? next('/login') : next();
+  if (store.getters.user.isAuthorized) {
+    (to.path === '/login') ? next('/edit-articles') : next();
   } else {
-    next();
+    (to.meta && to.meta.requiresAuth) ? next('/login') : next();
   }
 });
 
