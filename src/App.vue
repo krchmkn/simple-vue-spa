@@ -39,6 +39,8 @@ export default {
     & h2 {
       font-size: 22px;
       font-weight: 100;
+      white-space: normal;
+      word-break: break-word;
     }
 
     & a {

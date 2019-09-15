@@ -3,7 +3,7 @@
       <h2 class="article__header">{{ article.header }}</h2>
       <div class="article__date">{{ article.date | moment('DD.MM.YYYY, H:mm') }}</div>
       <div>
-        <div>{{ article.text }}</div>
+        <div class="article__text">{{ article.text }}</div>
         <div class="article__edit-box" v-if="editAllowed">
           <Button small @click="$store.commit('openModal', { name: 'edit', current: {...article} })">
             Редактировать
@@ -32,6 +32,13 @@ export default {
       
       &__header {
         padding-bottom: 10px;
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      &__text {
+        white-space: normal;
+        word-break: break-word;
       }
 
       &__date {

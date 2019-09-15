@@ -1,21 +1,23 @@
 <template>
-    <Modal>
-        <template v-slot:header>Редактировать статью</template>
-        <template v-slot:content>
-            <label>
-                Заголовок 
-                <input v-model="storedHeader" type="text" />
-            </label>
-            <label>
-                Текст 
-                <textarea v-model="storedText" rows="3" />
-            </label>
-        </template>
-        <template v-slot:footer>
-            <Button @click="close">Отмена</Button>
-            <Button primary @click="edit">Сохранить</Button>
-        </template>
-    </Modal>
+    <div @close="close">
+        <Modal>
+            <template v-slot:header>Редактировать статью</template>
+            <template v-slot:content>
+                <label>
+                    Заголовок 
+                    <input v-model="storedHeader" type="text" />
+                </label>
+                <label>
+                    Текст 
+                    <textarea v-model="storedText" rows="3" />
+                </label>
+            </template>
+            <template v-slot:footer>
+                <Button @click="close">Отмена</Button>
+                <Button primary @click="edit">Сохранить</Button>
+            </template>
+        </Modal>
+    </div>
 </template>
 
 <script>

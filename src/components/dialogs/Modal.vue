@@ -32,7 +32,6 @@ export default {}
 
         &__box {
             max-width: 600px;
-            min-width: 320px;
             flex: 1;
             background: #fff;
             border-radius: 4px;

@@ -1,11 +1,13 @@
 <template>
-    <Modal>
-        <template v-slot:content>Удалить данную статью?</template>
-        <template v-slot:footer>
-            <Button @click="close">Отмена</Button>
-            <Button primary @click="remove">Удалить</Button>
-        </template>
-    </Modal>
+    <div @close="close">
+        <Modal>
+            <template v-slot:content>Удалить данную статью?</template>
+            <template v-slot:footer>
+                <Button @click="close">Отмена</Button>
+                <Button primary @click="remove">Удалить</Button>
+            </template>
+        </Modal>
+    </div>
 </template>
 
 <script>
