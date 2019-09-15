@@ -1,5 +1,8 @@
 # simple-vue-spa
 
+Watch here [simple-vue-spa.firebaseapp.com](https://simple-vue-spa.firebaseapp.com)
+
+
 ## Project setup
 ```
 npm install

@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
     .login-from {
-        width: 320px;
+        max-width: 320px;
         margin: 0 auto;
         box-sizing: border-box;
 
