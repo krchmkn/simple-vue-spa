@@ -1,17 +1,15 @@
 <template>
-    <div @close="close">
-        <Modal>
-            <template v-slot:header>Добавить статью</template>
-            <template v-slot:content>
-                <label>Заголовок <input type="text" v-model="header" /></label>
-                <label>Текст <textarea rows="3" v-model="text" /></label>
-            </template>
-            <template v-slot:footer>
-                <Button @click="close">Отмена</Button>
-                <Button primary @click="add">Добавить</Button>
-            </template>
-        </Modal>
-    </div>
+    <Modal @close="close">
+        <template v-slot:header>Добавить статью</template>
+        <template v-slot:content>
+            <label>Заголовок <input type="text" v-model="header" /></label>
+            <label>Текст <textarea rows="3" v-model="text" /></label>
+        </template>
+        <template v-slot:footer>
+            <Button @click="close">Отмена</Button>
+            <Button primary @click="add">Добавить</Button>
+        </template>
+    </Modal>
 </template>
 
 <script>
