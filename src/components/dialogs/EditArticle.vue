@@ -39,7 +39,7 @@ export default {
                 return this.$store.getters.modals.edit.current.header;
             },
             set(value) {
-                this.header = value;
+                this.header = value.trim();
             }
         },
         storedText: {
@@ -47,7 +47,7 @@ export default {
                 return this.$store.getters.modals.edit.current.text;
             },
             set(value) {
-                this.text = value;
+                this.text = value.trim();
             }
         }
     },
@@ -58,8 +58,8 @@ export default {
         edit() {
             this.$store.dispatch('editArticle', { 
                 id: this.articleId,
-                header: this.header, 
-                text: this.text
+                header: this.header || this.storedHeader, 
+                text: this.text || this.storedText
             }).then(this.close).catch(() => {
                 alert('Ошибка!')
             });
